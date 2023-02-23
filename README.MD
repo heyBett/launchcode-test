@@ -107,6 +107,8 @@ The Frontend was built on NextJS, the React Framework for the Web. Next has powe
 
 This Framework also has API Routes, which are basically internal routes that run NodeJS in a serveless way, without the need for a server.
 
+I used https://tailwindcss.com/ for styling and https://heroicons.com/ for the icons. I've made a custom tailwind.config with Wet Bat color classes.
+
 ## Infrastructure
 
 The frontend and API routes are on Vercel. For the database I'm using an instance of PostgreSQL and testing https://neon.tech. (Let me know if you have any downtime)
