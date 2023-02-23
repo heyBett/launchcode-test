@@ -63,9 +63,8 @@ export default async function handle(
       if (quote.transportation) {
         object.transportation = quote.transportation;
       }
-      if (quote.service) {
-        object.service =
-          (quote.service as unknown) === "true" || quote.service === true;
+      if (quote.service !== null && quote.service !== undefined) {
+        object.service = Boolean(quote.service) === false;
       }
 
       const data: partialQuote = object;
@@ -74,7 +73,6 @@ export default async function handle(
 
     const data = await convertTypes(req.body);
     const id: string = req.query.id;
-    console.log(data);
 
     const updateQuote = prisma.quote.update({
       where: { id: id },

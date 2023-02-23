@@ -23,8 +23,6 @@ const headers: header[] = [
 ];
 
 function isExpanded(header: header[], expanded: boolean) {
-  const [selected, setSelected] = useState("");
-
   function filter(header: header) {
     return header.expanded === expanded || header.expanded === undefined;
   }
@@ -41,11 +39,14 @@ export function Row(
   const { mutate } = useSWRConfig();
 
   async function convertQuote(quote: quote) {
+    console.log(quote.service);
+    console.log(quote.service === false);
+
     const conversion = await axios({
       method: "PATCH",
       url: "/api/v1/quotes?id=" + quote.id,
       data: {
-        service: !quote.service,
+        service: quote.service,
       },
     });
     console.log(conversion.data);
