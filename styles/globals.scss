@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-padding-top: 75px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  border-width: 1px;
+}
+
+select {
+  border-width: 1px;
+}
+
+.recharts-text {
+  font-size: 13px;
+  fill: #5f6cae !important;
+}
+
+.css-vnlqw7-control:hover {
+  border-color: transparent !important;
+}
+
+* {
+  --tw-ring-color: transparent !important;
+}
+
+@media (min-width: 768px) {
+  .containerWrapper {
+    margin-left: 8rem;
+    margin-top: 3rem;
+  }
+}
+
+main {
+  min-height: calc(100vh - 3rem);
+}
+
+// Overlay Animation
+@keyframes bouncedelay {
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+}
+
+.loading-overlay {
+  width: 100vw;
+  height: 100vh;
+}
+
+.bounce-loader {
+  display: flex;
+  transition: all 0.2s;
+  z-index: 10000;
+  .bounce {
+    display: block;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    margin-bottom: 0px;
+    animation: 1s ease-in-out 0s normal both infinite bouncedelay;
+
+    img {
+      max-width: none;
+    }
+  }
+}

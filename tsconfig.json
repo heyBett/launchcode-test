@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "outDir": "dist",
+    "module": "CommonJS"
+  },
+  "include": [
+    "next-env.d.tsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.jsx",
+    "pages/index.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
