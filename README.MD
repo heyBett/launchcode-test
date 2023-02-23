@@ -79,6 +79,7 @@ If you want to start locally in production, run this commands in sequence:
 ![Airports Dropdown](https://raw.githubusercontent.com/heyBett/launchcode-test/master/public/images/documentation/airports.png)
 
 Searching through a gigantic array and within two properties of each object may seem unperformative, and indeed it is.
+![Screenshot](https://raw.githubusercontent.com/heyBett/launchcode-test/master/public/images/documentation/lines.png)
 
 I decided to use a component that renders the options according to the typed information, and on the first run the results took seconds to appear.
 
